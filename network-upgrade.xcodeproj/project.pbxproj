@@ -10,9 +10,12 @@
 		C46197372C0FE4E9007D3B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197362C0FE4E9007D3B6B /* AppDelegate.swift */; };
 		C46197392C0FE4E9007D3B6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197382C0FE4E9007D3B6B /* SceneDelegate.swift */; };
 		C461973B2C0FE4E9007D3B6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461973A2C0FE4E9007D3B6B /* ViewController.swift */; };
-		C461973E2C0FE4E9007D3B6B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C461973D2C0FE4E9007D3B6B /* Base */; };
 		C46197402C0FE4EB007D3B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C461973F2C0FE4EB007D3B6B /* Assets.xcassets */; };
 		C46197432C0FE4EB007D3B6B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C46197422C0FE4EB007D3B6B /* Base */; };
+		C461974C2C0FE514007D3B6B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C461974B2C0FE514007D3B6B /* SnapKit */; };
+		C461974F2C0FE525007D3B6B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C461974E2C0FE525007D3B6B /* Alamofire */; };
+		C46197522C0FE533007D3B6B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C46197512C0FE533007D3B6B /* Kingfisher */; };
+		C46197552C0FE54D007D3B6B /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = C46197542C0FE54D007D3B6B /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +23,6 @@
 		C46197362C0FE4E9007D3B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46197382C0FE4E9007D3B6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C461973A2C0FE4E9007D3B6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C461973D2C0FE4E9007D3B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C461973F2C0FE4EB007D3B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C46197422C0FE4EB007D3B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C46197442C0FE4EB007D3B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +33,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46197552C0FE54D007D3B6B /* Toast in Frameworks */,
+				C46197522C0FE533007D3B6B /* Kingfisher in Frameworks */,
+				C461974C2C0FE514007D3B6B /* SnapKit in Frameworks */,
+				C461974F2C0FE525007D3B6B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +65,6 @@
 				C46197362C0FE4E9007D3B6B /* AppDelegate.swift */,
 				C46197382C0FE4E9007D3B6B /* SceneDelegate.swift */,
 				C461973A2C0FE4E9007D3B6B /* ViewController.swift */,
-				C461973C2C0FE4E9007D3B6B /* Main.storyboard */,
 				C461973F2C0FE4EB007D3B6B /* Assets.xcassets */,
 				C46197412C0FE4EB007D3B6B /* LaunchScreen.storyboard */,
 				C46197442C0FE4EB007D3B6B /* Info.plist */,
@@ -83,6 +88,12 @@
 			dependencies = (
 			);
 			name = "network-upgrade";
+			packageProductDependencies = (
+				C461974B2C0FE514007D3B6B /* SnapKit */,
+				C461974E2C0FE525007D3B6B /* Alamofire */,
+				C46197512C0FE533007D3B6B /* Kingfisher */,
+				C46197542C0FE54D007D3B6B /* Toast */,
+			);
 			productName = "network-upgrade";
 			productReference = C46197332C0FE4E9007D3B6B /* network-upgrade.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,12 @@
 				Base,
 			);
 			mainGroup = C461972A2C0FE4E9007D3B6B;
+			packageReferences = (
+				C461974A2C0FE514007D3B6B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C461974D2C0FE525007D3B6B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C46197502C0FE533007D3B6B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C46197532C0FE54D007D3B6B /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = C46197342C0FE4E9007D3B6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +144,6 @@
 			files = (
 				C46197402C0FE4EB007D3B6B /* Assets.xcassets in Resources */,
 				C46197432C0FE4EB007D3B6B /* Base in Resources */,
-				C461973E2C0FE4E9007D3B6B /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C461973C2C0FE4E9007D3B6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C461973D2C0FE4E9007D3B6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C46197412C0FE4EB007D3B6B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,8 +306,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +316,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junehee.network-upgrade";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,8 +339,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +349,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junehee.network-upgrade";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +381,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C461974A2C0FE514007D3B6B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		C461974D2C0FE525007D3B6B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		C46197502C0FE533007D3B6B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		C46197532C0FE54D007D3B6B /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C461974B2C0FE514007D3B6B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C461974A2C0FE514007D3B6B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C461974E2C0FE525007D3B6B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C461974D2C0FE525007D3B6B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C46197512C0FE533007D3B6B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C46197502C0FE533007D3B6B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		C46197542C0FE54D007D3B6B /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C46197532C0FE54D007D3B6B /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C461972B2C0FE4E9007D3B6B /* Project object */;
 }
