@@ -19,18 +19,21 @@ struct Market: Decodable {
 class MarketViewController: UIViewController {
     
     let marketTableView = UITableView()
+    
+    var marketList: [Market] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        
         configureTableView()
         
         print(#function, "11111")
-//        callRequest()
+        callRequest()
         print(#function, "22222")
     }
     
     func configureTableView() {
+        view.backgroundColor = .systemBackground
         view.addSubview(marketTableView)
 
         marketTableView.snp.makeConstraints { make in
@@ -41,7 +44,9 @@ class MarketViewController: UIViewController {
         marketTableView.delegate = self
         marketTableView.dataSource = self
         
+        marketTableView.rowHeight = 60
         
+        marketTableView.register(MarketTableViewCell.self, forCellReuseIdentifier: MarketTableViewCell.identifier)
     }
     
     func callRequest() {
@@ -51,7 +56,9 @@ class MarketViewController: UIViewController {
         AF.request(URL).responseDecodable(of: [Market].self) { res in
             switch res.result {
             case .success(let value):
-                print(value)
+                print("성공!")
+                self.marketList = value
+                self.marketTableView.reloadData()
             case .failure(let error):
                 print(error)
             }
@@ -65,11 +72,17 @@ class MarketViewController: UIViewController {
 extension MarketViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        print(#function, marketList.count)
+        return marketList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = marketTableView.dequeueReusableCell(withIdentifier: MarketTableViewCell.identifier, for: indexPath) as! MarketTableViewCell
+        let idx = indexPath.row
+        
+        cell.nameLabel.text = marketList[idx].market
+        
+        return cell
     }
 
 }

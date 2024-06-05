@@ -16,6 +16,10 @@
 		C461974F2C0FE525007D3B6B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C461974E2C0FE525007D3B6B /* Alamofire */; };
 		C46197522C0FE533007D3B6B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C46197512C0FE533007D3B6B /* Kingfisher */; };
 		C46197552C0FE54D007D3B6B /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = C46197542C0FE54D007D3B6B /* Toast */; };
+		C46197572C0FFDAE007D3B6B /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197562C0FFDAE007D3B6B /* MarketViewController.swift */; };
+		C46197592C10041F007D3B6B /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197582C10041F007D3B6B /* MarketTableViewCell.swift */; };
+		C461975D2C101311007D3B6B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C461975C2C101311007D3B6B /* .gitignore */; };
+		C461975F2C10143B007D3B6B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461975E2C10143B007D3B6B /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		C461973F2C0FE4EB007D3B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C46197422C0FE4EB007D3B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C46197442C0FE4EB007D3B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46197562C0FFDAE007D3B6B /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		C46197582C10041F007D3B6B /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
+		C461975C2C101311007D3B6B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C461975E2C10143B007D3B6B /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 		C461972A2C0FE4E9007D3B6B = {
 			isa = PBXGroup;
 			children = (
+				C461975C2C101311007D3B6B /* .gitignore */,
 				C46197352C0FE4E9007D3B6B /* network-upgrade */,
 				C46197342C0FE4E9007D3B6B /* Products */,
 			);
@@ -62,14 +71,33 @@
 		C46197352C0FE4E9007D3B6B /* network-upgrade */ = {
 			isa = PBXGroup;
 			children = (
+				C461975A2C100424007D3B6B /* Cell */,
+				C461975B2C10042C007D3B6B /* Controller */,
 				C46197362C0FE4E9007D3B6B /* AppDelegate.swift */,
 				C46197382C0FE4E9007D3B6B /* SceneDelegate.swift */,
-				C461973A2C0FE4E9007D3B6B /* ViewController.swift */,
 				C461973F2C0FE4EB007D3B6B /* Assets.xcassets */,
 				C46197412C0FE4EB007D3B6B /* LaunchScreen.storyboard */,
 				C46197442C0FE4EB007D3B6B /* Info.plist */,
+				C461975E2C10143B007D3B6B /* APIKey.swift */,
 			);
 			path = "network-upgrade";
+			sourceTree = "<group>";
+		};
+		C461975A2C100424007D3B6B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C46197582C10041F007D3B6B /* MarketTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C461975B2C10042C007D3B6B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C461973A2C0FE4E9007D3B6B /* ViewController.swift */,
+				C46197562C0FFDAE007D3B6B /* MarketViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46197402C0FE4EB007D3B6B /* Assets.xcassets in Resources */,
+				C461975D2C101311007D3B6B /* .gitignore in Resources */,
 				C46197432C0FE4EB007D3B6B /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,8 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46197572C0FFDAE007D3B6B /* MarketViewController.swift in Sources */,
 				C461973B2C0FE4E9007D3B6B /* ViewController.swift in Sources */,
 				C46197372C0FE4E9007D3B6B /* AppDelegate.swift in Sources */,
+				C46197592C10041F007D3B6B /* MarketTableViewCell.swift in Sources */,
+				C461975F2C10143B007D3B6B /* APIKey.swift in Sources */,
 				C46197392C0FE4E9007D3B6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +337,6 @@
 				INFOPLIST_FILE = "network-upgrade/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -338,7 +369,6 @@
 				INFOPLIST_FILE = "network-upgrade/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
