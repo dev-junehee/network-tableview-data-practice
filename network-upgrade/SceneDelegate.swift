@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let vc = MarketViewController()
+//        let vc = MarketViewController()
+        let vc = BookViewController()
         window?.rootViewController = vc // 엔트리 포인트!
         window?.makeKeyAndVisible() // 실제로 사용자에게 보여주는 코드 (Apple Guide)
     }

@@ -20,6 +20,8 @@
 		C46197592C10041F007D3B6B /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197582C10041F007D3B6B /* MarketTableViewCell.swift */; };
 		C461975D2C101311007D3B6B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C461975C2C101311007D3B6B /* .gitignore */; };
 		C461975F2C10143B007D3B6B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461975E2C10143B007D3B6B /* APIKey.swift */; };
+		C46197B72C168B27007D3B6B /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197B62C168B27007D3B6B /* BookViewController.swift */; };
+		C46197B92C1695B9007D3B6B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197B82C1695B9007D3B6B /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C46197582C10041F007D3B6B /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
 		C461975C2C101311007D3B6B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C461975E2C10143B007D3B6B /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		C46197B62C168B27007D3B6B /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		C46197B82C1695B9007D3B6B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		C46197352C0FE4E9007D3B6B /* network-upgrade */ = {
 			isa = PBXGroup;
 			children = (
+				C46197B52C168B0F007D3B6B /* Book */,
+				C46197B42C168AFB007D3B6B /* New Group */,
 				C461975A2C100424007D3B6B /* Cell */,
 				C461975B2C10042C007D3B6B /* Controller */,
 				C46197362C0FE4E9007D3B6B /* AppDelegate.swift */,
@@ -98,6 +104,22 @@
 				C46197562C0FFDAE007D3B6B /* MarketViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C46197B42C168AFB007D3B6B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C46197B52C168B0F007D3B6B /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				C46197B62C168B27007D3B6B /* BookViewController.swift */,
+				C46197B82C1695B9007D3B6B /* Book.swift */,
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46197B92C1695B9007D3B6B /* Book.swift in Sources */,
 				C46197572C0FFDAE007D3B6B /* MarketViewController.swift in Sources */,
 				C461973B2C0FE4E9007D3B6B /* ViewController.swift in Sources */,
 				C46197372C0FE4E9007D3B6B /* AppDelegate.swift in Sources */,
+				C46197B72C168B27007D3B6B /* BookViewController.swift in Sources */,
 				C46197592C10041F007D3B6B /* MarketTableViewCell.swift in Sources */,
 				C461975F2C10143B007D3B6B /* APIKey.swift in Sources */,
 				C46197392C0FE4E9007D3B6B /* SceneDelegate.swift in Sources */,
