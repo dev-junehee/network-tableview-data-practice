@@ -34,10 +34,10 @@ class BookViewController: UIViewController {
     func collectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 100)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 20, height: 80)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 0)
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
         layout.scrollDirection = .horizontal
         
         return layout
@@ -54,7 +54,7 @@ class BookViewController: UIViewController {
         tableView.register(BookTableViewCell.self, forCellReuseIdentifier: BookTableViewCell.id)
         tableView.prefetchDataSource = self
         
-        collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .darkGray
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.id)
@@ -76,7 +76,7 @@ class BookViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.top.equalTo(searchBar.snp.bottom)
             $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(100)
+            $0.height.equalTo(400)
         }
         
         tableView.snp.makeConstraints { make in
