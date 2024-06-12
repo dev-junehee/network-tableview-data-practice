@@ -15,7 +15,7 @@ class BookCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .red
+        backgroundColor = .yellow
     }
     
     required init?(coder: NSCoder) {

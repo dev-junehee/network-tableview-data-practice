@@ -17,6 +17,8 @@ class BookViewController: UIViewController {
     let searchBar = UISearchBar()
     let tableView = UITableView()
     
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
+    
     var bookList = KakaoBook(documents: [], meta: KakaoBookMeta(is_end: false, pageable_count: 0, total_count: 0))
     
     var page = 1
@@ -27,6 +29,18 @@ class BookViewController: UIViewController {
         configureView()
         configureLayout()
         configureUI()
+    }
+    
+    func collectionViewLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+        
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 100)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.scrollDirection = .horizontal
+        
+        return layout
     }
     
     func configureView() {
@@ -40,8 +54,17 @@ class BookViewController: UIViewController {
         tableView.register(BookTableViewCell.self, forCellReuseIdentifier: BookTableViewCell.id)
         tableView.prefetchDataSource = self
         
+        collectionView.backgroundColor = .yellow
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.id)
+        
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.isPagingEnabled = true  // 그러나 넘기는 기준이 셀 크기가 아님
+        
         view.addSubview(searchBar)
         view.addSubview(tableView)
+        view.addSubview(collectionView)
     }
     
     func configureLayout() {
@@ -50,8 +73,14 @@ class BookViewController: UIViewController {
             make.height.equalTo(44)
         }
         
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(searchBar.snp.bottom)
+            $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            $0.height.equalTo(100)
+        }
+        
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(searchBar.snp.bottom)
+            make.top.equalTo(collectionView.snp.bottom)
             make.horizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
@@ -106,7 +135,6 @@ extension BookViewController {
             }
         }
     }
-    
     
     func callRequestKoGPT() {
         print(#function)
@@ -188,6 +216,26 @@ extension BookViewController: UISearchBarDelegate {
     }
 }
 
+extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.id, for: indexPath) as! BookCollectionViewCell
+        
+        cell.backgroundColor = UIColor(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: CGFloat.random(in: 0...1),
+            alpha: 1)
+        
+        return cell
+    }
+    
+    
+}
+
 // Prefetching 익스텐션
 extension BookViewController: UITableViewDataSourcePrefetching {
     // cellForRowAt이 호출되기 전에 미리 호출된다.
@@ -209,8 +257,6 @@ extension BookViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         print("Cancel Prefetch", indexPaths)
     }
-    
-    
 }
 
 // TableView 익스텐션
