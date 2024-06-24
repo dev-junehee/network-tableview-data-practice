@@ -82,28 +82,9 @@ class ViewController: UIViewController {
     }
     
     @objc func checkButtonClicked() {
-        print(#function)
-        let URL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(numberField.text!)"
-        
-//        AF.request(URL).responseString { res in
-//            print(res)
-//        }
-        
-        AF.request(URL).responseDecodable(of: Lotto.self) { res in
-            switch res.result {
-            case .success(let value):
-                print(value)
-                self.resultLabel.text = """
-                \(value.drwNoDate)
-                1등 당첨 금액: \(value.totSellamnt.formatted())원
-                """
-            case .failure(let error):
-                print(error)
-                self.resultLabel.text = "올바른 값을 입력해 주세요!"
-            }
+        LottoManager.shared.callRequest(number: numberField.text ?? "1") { number in
+            self.resultLabel.text = number
         }
-        
-        view.endEditing(true)
     }
 
 }
