@@ -18,7 +18,7 @@ final class NasaViewController: UIViewController {
         
         case one = "2308/sombrero_spitzer_3000.jpg"
         case two = "2212/NGC1365-CDK24-CDK17.jpg"
-        case three = "2307/M64Hubble.jpg"
+        case three = "2307/M64Hubble.jpgggg"
         case four = "2306/BeyondEarth_Unknown_3000.jpg"
         case five = "2307/NGC6559_Block_1311.jpg"
         case six = "2304/OlympusMons_MarsExpress_6000.jpg"
@@ -101,7 +101,6 @@ final class NasaViewController: UIViewController {
         progressLabel.backgroundColor = .systemTeal
         progressLabel.textAlignment = .center
         nasaImage.backgroundColor = .systemCyan
-        nasaImage.contentMode = .scaleAspectFill
     }
     
     private func callRequest() {
@@ -154,12 +153,16 @@ extension NasaViewController: URLSessionDataDelegate {
         
         if let error = error {
             progressLabel.text = "문제가 생겼어요!"
+            nasaImage.contentMode = .scaleAspectFit
+            nasaImage.image = UIImage(systemName: "eye.slash.circle")
+            isBuffer = false
         } else {
             print("데이터 불러오기 성공")
             guard let buffer = buffer else {
                 print("buffer is nil")
                 return
             }
+            nasaImage.contentMode = .scaleAspectFill
             let image = UIImage(data: buffer)
             nasaImage.image = image
             isBuffer = false
