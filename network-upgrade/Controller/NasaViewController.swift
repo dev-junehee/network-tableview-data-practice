@@ -43,6 +43,7 @@ final class NasaViewController: UIViewController {
             progressLabel.text = "\(result)%"
         }
     }
+    var isBuffer = false
     
     var session: URLSession?
     
@@ -114,6 +115,10 @@ final class NasaViewController: UIViewController {
     }
     
     @objc func requestButtonClicked() {
+        if isBuffer {
+            print("데이터 로딩 중입니다.")
+            return
+        }
         buffer = Data()
         callRequest()
     }
@@ -123,6 +128,8 @@ final class NasaViewController: UIViewController {
 extension NasaViewController: URLSessionDataDelegate {
     // 서버 최초 응답
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse) async -> URLSession.ResponseDisposition {
+        isBuffer = true
+        
         guard let res = response as? HTTPURLResponse, (200...299).contains(res.statusCode) else {
             print(#function, "응답 데이터 오류")
             return .cancel
@@ -144,6 +151,7 @@ extension NasaViewController: URLSessionDataDelegate {
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: (any Error)?) {
         print(#function, error)
+        
         if let error = error {
             progressLabel.text = "문제가 생겼어요!"
         } else {
@@ -154,6 +162,7 @@ extension NasaViewController: URLSessionDataDelegate {
             }
             let image = UIImage(data: buffer)
             nasaImage.image = image
+            isBuffer = false
         }
     }
 }
