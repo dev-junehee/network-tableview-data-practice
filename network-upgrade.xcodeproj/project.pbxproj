@@ -26,6 +26,7 @@
 		C46197D12C17F388007D3B6B /* KakaoBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197D02C17F388007D3B6B /* KakaoBook.swift */; };
 		C46197D52C182DC0007D3B6B /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197D42C182DC0007D3B6B /* BookCollectionViewController.swift */; };
 		C46197D72C182E82007D3B6B /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46197D62C182E82007D3B6B /* BookCollectionViewCell.swift */; };
+		C47C46B82C32EB6100665A7A /* NasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47C46B72C32EB6100665A7A /* NasaViewController.swift */; };
 		C4A52B022C291DEE0013BCDF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A52B012C291DEE0013BCDF /* NetworkManager.swift */; };
 		C4B0B9F32C19347500CC5765 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0B9F22C19347500CC5765 /* SignViewController.swift */; };
 		C4B0B9F62C19370000CC5765 /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0B9F52C19370000CC5765 /* BlackRadiusTextField.swift */; };
@@ -50,6 +51,7 @@
 		C46197D02C17F388007D3B6B /* KakaoBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBook.swift; sourceTree = "<group>"; };
 		C46197D42C182DC0007D3B6B /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		C46197D62C182E82007D3B6B /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		C47C46B72C32EB6100665A7A /* NasaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewController.swift; sourceTree = "<group>"; };
 		C4A52B012C291DEE0013BCDF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C4B0B9F22C19347500CC5765 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		C4B0B9F52C19370000CC5765 /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				C461973A2C0FE4E9007D3B6B /* ViewController.swift */,
 				C46197562C0FFDAE007D3B6B /* MarketViewController.swift */,
+				C47C46B72C32EB6100665A7A /* NasaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				C4B0B9F62C19370000CC5765 /* BlackRadiusTextField.swift in Sources */,
 				C46197B72C168B27007D3B6B /* BookViewController.swift in Sources */,
 				C46197592C10041F007D3B6B /* MarketTableViewCell.swift in Sources */,
+				C47C46B82C32EB6100665A7A /* NasaViewController.swift in Sources */,
 				C46197D72C182E82007D3B6B /* BookCollectionViewCell.swift in Sources */,
 				C461975F2C10143B007D3B6B /* APIKey.swift in Sources */,
 				C46197392C0FE4E9007D3B6B /* SceneDelegate.swift in Sources */,

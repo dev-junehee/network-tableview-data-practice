@@ -24,7 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let vc = MarketViewController()
 //        let vc = BookViewController()
 //        let vc = BookCollectionViewController()
-        let vc = SignViewController()
+//        let vc = SignViewController()
+        let vc = NasaViewController()
         
         window?.rootViewController = vc // 엔트리 포인트!
         window?.makeKeyAndVisible() // 실제로 사용자에게 보여주는 코드 (Apple Guide)
